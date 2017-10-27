@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100');
+
+body {
+	margin: 0;
+}
+
+header {
+	padding-top: 3rem;
+	text-align: center;
+	font-size: 90px;
+	color: #fff;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	background: white; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#E09484, white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#E09484, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#E09484, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#E09484, white); /* Standard syntax */
+    height: 250px;
+}
+
+header div {
+	padding: 0rem;
+}
+
+svg {
+	height: 40px;
+	width: 40px;
+	fill: white;
+}
+
+svg:hover {
+	fill: #DEB4AD;
+}
