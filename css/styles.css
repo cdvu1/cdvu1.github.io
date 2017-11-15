@@ -5,7 +5,7 @@ body {
 }
 
 header {
-	padding-top: 3rem;
+	padding-top: 1rem;
 	text-align: center;
 	font-size: 90px;
 	color: #fff;
@@ -15,12 +15,9 @@ header {
     background: -o-linear-gradient(#E09484, white); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#E09484, white); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#E09484, white); /* Standard syntax */
-    height: 250px;
+    height: 400px;
 }
 
-header div {
-	padding: 0rem;
-}
 
 a {
 	text-decoration: none;
@@ -34,4 +31,9 @@ svg {
 
 svg:hover {
 	fill: #DEB4AD;
+}
+
+#headshot img {
+	width: 120px;
+	border-radius: 100%;
 }
