@@ -20,7 +20,7 @@ header {
 
 .name {
 	font-family: 'Alegreya Sans SC', sans-serif;
-	font-size: 80px;
+	font-size: 70px;
 }
 
 a {
@@ -39,7 +39,7 @@ svg:hover {
 }
 
 #headshot {
-	width: 250px;
+	width: 200px;
 }
 
 .about-me {
