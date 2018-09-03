@@ -2,7 +2,6 @@
 
 body {
 	margin: 0;
-	color: rgb(184, 141, 136);
 }
 
 header {
@@ -15,12 +14,13 @@ header {
     background: -o-linear-gradient(#ef9a9a, white); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#ef9a9a, white); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#ef9a9a, white); /* Standard syntax */
-    height: 500px;
+    height: 350px;
 }
 
 .name {
 	font-family: 'Alegreya Sans SC', sans-serif;
 	font-size: 60px;
+	margin-top: 0px;
 }
 
 a {
@@ -35,9 +35,13 @@ svg {
 }
 
 svg:hover {
-	fill: rgb(216, 175, 172);
+	fill: #e0e0e0;
 }
 
 #headshot {
 	width: 150px;
+}
+
+#headshot, .about-me {
+	margin-top: 15px;
 }
