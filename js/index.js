@@ -93,7 +93,7 @@ function displayProjects() {
     cardImage.src = "../img/boozefeed/bf1.png";
 
     card.addEventListener("click", () => {
-        alert("hi");
+        window.open("https://bit.ly/boozefeed");
     });
 
     let overlay = document.createElement("div");
