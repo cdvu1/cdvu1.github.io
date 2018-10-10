@@ -81,7 +81,27 @@ function displayAboutMe() {
 
 function displayProjects() {
     CONTENT.innerHTML = "";
+    CONTENT.classList.add("d-flex");
+    CONTENT.classList.add("justify-content-between");
+    let boozefeed = {
+        image: "../img/projects/boozefeed.png",
+        title: "BOOZEFEED",
+        description: "A web application built with React that allows users to take, and create personality quizzes.",
+        link: "https://bit.ly/boozefeed"
+    }
+    createProjectCard(boozefeed);
+    //createProjectCard("../img/projects/boozefeed.png", "BOOZEFEED", "A web application that allows users to take, and create personality quizzes.", "https://bit.ly/boozefeed")
 
+    let shiny = {
+        image: "../img/projects/boozefeed.png",
+        title: "SVG GAME",
+        description: "A Javascript application game where randomly placed svgs must be collected",
+        link: "ceciliadvu.com/svg-game"
+    }
+    createProjectCard(shiny);
+}
+
+function createProjectCard(project) {
     let card = document.createElement("div");
     card.classList.add("card");
 
@@ -90,19 +110,17 @@ function displayProjects() {
 
     let cardImage = document.createElement("img");
     cardImage.classList.add("card-img-top");
-    cardImage.src = "../img/projects/boozefeed.png";
+    cardImage.src = project.image;
 
     card.addEventListener("click", () => {
-        window.open("https://bit.ly/boozefeed");
+        window.open(project.link);
     });
 
     let overlay = document.createElement("div");
     overlay.classList.add("overlay");
 
     let h2 = document.createElement("h2");
-    h2.innerText = "BOOZEFEED";
-
-    
+    h2.innerText = project.title;
 
     overlay.appendChild(h2);
 
@@ -113,7 +131,7 @@ function displayProjects() {
     cardBody.classList.add("card-body");
 
     let descr = document.createElement("div");
-    descr.innerText = "A web application that allows users to take, and create personality quizzes.";
+    descr.innerText = project.description;
 
     cardBody.appendChild(descr);
 
