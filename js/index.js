@@ -10,6 +10,7 @@ var state = {
 
 function removeNavSelected() {
     CONTENT.innerHTML = "";
+    CONTENT.classList.remove("d-flex")
     PROJECTS_NAV.classList.remove("nav-selected");
     ABOUT_ME_NAV.classList.remove("nav-selected");
 }
@@ -93,7 +94,7 @@ function displayProjects() {
     //createProjectCard("../img/projects/boozefeed.png", "BOOZEFEED", "A web application that allows users to take, and create personality quizzes.", "https://bit.ly/boozefeed")
 
     let shiny = {
-        image: "../img/projects/boozefeed.png",
+        image: "../img/projects/svggame.png",
         title: "SVG GAME",
         description: "A Javascript application game where randomly placed svgs must be collected",
         link: "ceciliadvu.com/svg-game"
