@@ -90,7 +90,7 @@ function displayProjects() {
 
     let cardImage = document.createElement("img");
     cardImage.classList.add("card-img-top");
-    cardImage.src = "../img/boozefeed/bf1.png";
+    cardImage.src = "../img/projects/boozefeed.png";
 
     card.addEventListener("click", () => {
         window.open("https://bit.ly/boozefeed");
