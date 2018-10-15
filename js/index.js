@@ -18,24 +18,47 @@ function removeNavSelected() {
 function displayAboutMe() {
     CONTENT.style.textAlign = "left";
     //introduction / bio / contact
-    let rowDiv = document.createElement("div");
-    //rowDiv.classList.add("row");
-    rowDiv.classList.add("d-flex");
-
-    let col1 = document.createElement("div");
-    //col1.classList.add("col");
-    col1.classList.add("flex-grow-1");
+    let bioDiv = document.createElement("div");
 
     let hello = document.createElement("h2");
     hello.innerText="WELCOME TO MY PAGE";
     let bio = document.createElement("div");
-    bio.innerText = "Hello! My name is Cecilia! I am a developer with a great interest in web development. I simply enjoy being able to utilize my skills, the web and technology to display information and content. On my free time I love to run, play flag football, and eat Hot Cheetos.";
+    bio.innerHTML = "Hello! I am currently an Informatics student at the University of Washington with great interests in web development with experiences building full stack web applications. I enjoy being able to use the power of the web to build applications to enlighten users or make their lives easier. <br><br> I am a very hardworking, self-motivated and optimistic individual and I hope to be able to give back to low-income and underrepresented communities by giving the younger generation exposure to technology. <br><br>In my free time, I love to buy shoes and stay active with working out, running, wrestling, and playing flag football. I also have a Hot Cheeto eating addiction!<br><br>Please feel free to reach out to me with any opportunities available!";
     
-    col1.appendChild(hello);
-    col1.appendChild(bio);
+    bioDiv.appendChild(hello);
+    bioDiv.appendChild(bio);
+    CONTENT.appendChild(bioDiv);
 
+    let rowDiv = document.createElement("div");
+    rowDiv.classList.add("d-flex");
+    //education
+    let col1 = document.createElement("div");
+    col1.classList.add("flex-grow-1");
+
+    let education = document.createElement("h2");
+    education.innerText = "EDUCATION";
+
+    let schoolName = document.createElement("div");
+    schoolName.innerText="UNIVERSITY OF WASHINGTON";
+    schoolName.classList.add("school-name");
+
+    let major = document.createElement("div");
+    major.innerText="B.S. Informatics - 3.52 GPA";
+
+    let gradDate = document.createElement("div");
+    gradDate.innerText = "Graduation: June 2019";
+
+    let relatedCourses = document.createElement("div");
+    relatedCourses.innerText = "Related courses: Client-Side Web Development, Server-Side Web Development, Data Structures and Algorithms, Relational Database Management Systems, Scientific Computing (MATLAB)";
+
+    col1.appendChild(education);
+    col1.appendChild(schoolName);
+    col1.appendChild(major);
+    col1.appendChild(gradDate);
+    col1.appendChild(relatedCourses);
+
+    //contact
     let col2 = document.createElement("div");
-    //col2.classList.add("col");
 
     let contact = document.createElement("h2");
     contact.innerText = "CONTACT";
@@ -54,30 +77,6 @@ function displayAboutMe() {
     rowDiv.appendChild(col2);
 
     CONTENT.appendChild(rowDiv);
-
-
-    //education
-    let education = document.createElement("h2");
-    education.innerText = "EDUCATION";
-
-    let schoolName = document.createElement("div");
-    schoolName.innerText="UNIVERSITY OF WASHINGTON";
-    schoolName.classList.add("school-name");
-
-    let major = document.createElement("div");
-    major.innerText="B.S. Informatics - 3.52 GPA";
-
-    let gradDate = document.createElement("div");
-    gradDate.innerText = "Graduation: June 2019";
-
-    let relatedCourses = document.createElement("div");
-    relatedCourses.innerText = "Related courses: Client-Side Web Development, Server-Side Web Development, Data Structures and Algorithms, Relational Database Management Systems, Scientific Computing (MATLAB)";
-
-    CONTENT.appendChild(education);
-    CONTENT.appendChild(schoolName);
-    CONTENT.appendChild(major);
-    CONTENT.appendChild(gradDate);
-    CONTENT.appendChild(relatedCourses);
 }
 
 function displayProjects() {
@@ -97,7 +96,7 @@ function displayProjects() {
         image: "../img/projects/svggame.png",
         title: "SVG GAME",
         description: "A Javascript application game where randomly placed svgs must be collected",
-        link: "ceciliadvu.com/svg-game"
+        link: "http://ceciliadvu.com/svg-game"
     }
     createProjectCard(shiny);
 }
